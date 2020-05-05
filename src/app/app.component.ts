@@ -8,9 +8,5 @@ import { COURSES } from '../environments/db-data'
 })
 export class AppComponent {
   title = 'my-app';
-  
-  con = COURSES[0];
-  cat = COURSES[1];
-  
 
 }

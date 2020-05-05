@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JupeterComponent } from './jupeter/jupeter.component';
 
+import { MatInputModule } from "@angular/material/input";
+import { MatCardModule } from "@angular/material/card";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,9 +15,10 @@ import { JupeterComponent } from './jupeter/jupeter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]  
 })
 export class AppModule { }

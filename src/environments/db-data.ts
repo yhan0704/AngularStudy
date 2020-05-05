@@ -28,6 +28,31 @@ export const COURSES = [
         category: 'ADVANCED',
         lessonsCount: 11,
         promo:false
+    },
+    {
+        id: 3,
+        description: 'Angular PWA - Progressive Web Apps Course',
+        longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
+        iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
+        courseListIcon: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/alien.png',
+        category: 'ADVANCED',
+        lessonsCount: 8
+    },
+    {
+        id: 4,
+        description: 'Angular NgRx Store Reactive Extensions Architecture Course',
+        longDescription: "Learn how to the Angular NgRx Reactive Extensions and its Tooling to build a complete application.",
+        iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png',
+        courseListIcon: 'https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-small.png',
+        category: 'ADVANCED'
+    },
+    {
+        id: 5,
+        description: 'Angular Advanced Library Laboratory: Build Your Own Library',
+        longDescription: "Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm",
+        iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
+        courseListIcon: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular-advanced-lesson-icon.png',
+        category: 'ADVANCED'
     }
 ]
 

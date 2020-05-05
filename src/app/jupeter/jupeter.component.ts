@@ -9,14 +9,19 @@ import { course } from '../model/course'
   styleUrls: ['./jupeter.component.css']
 })
 export class JupeterComponent implements OnInit {
-  greeting = "hello";
+  name = "";
+
+  heroes: string[]= ["Superman", "Batman", "Ironman", "SuperWoman"]
 
   @Input()
   course:course;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+  onCourseViewed(){
+    console.log("hello world")
+  }
 }
