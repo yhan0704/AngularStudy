@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 // import { COURSES } from '../../environments/db-data'
 import { course } from '../model/course'
+import { HeroesService } from '../heroes.service';
+
 
 
 @Component({
@@ -9,14 +11,17 @@ import { course } from '../model/course'
   styleUrls: ['./jupeter.component.css']
 })
 export class JupeterComponent implements OnInit {
-  name = "";
+  // name = "";
 
-  heroes: string[]= ["Superman", "Batman", "Ironman", "SuperWoman"]
+  heroes;
 
   @Input()
   course:course;
 
-  constructor() {}
+  constructor(hero: HeroesService) 
+  {
+    this.heroes = hero.Hero;
+  }
 
   ngOnInit(): void {
   }

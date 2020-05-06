@@ -7,18 +7,21 @@ import { JupeterComponent } from './jupeter/jupeter.component';
 
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
+import { HeroesService } from './heroes.service';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JupeterComponent
+    JupeterComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [AppComponent]  
 })
 export class AppModule { }
