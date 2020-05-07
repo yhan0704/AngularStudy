@@ -8,4 +8,7 @@
 
 <input type="text" [(ngModel)] = "email" />
 
-<h3>{{text | slice}}</h3>
+<h3>{{text | titlecase}}</h3>
+
+<app-angular-basis [isSelected]="isSelected"></app-angular-basis>
+<button (click)="onClick()">Click Here</button>

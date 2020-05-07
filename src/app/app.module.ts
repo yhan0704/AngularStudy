@@ -11,13 +11,15 @@ import { HeroesService } from './heroes.service';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { SliceText } from './courses/slice.pipe';
+import { AngularBasisComponent } from './courses/angular-basis/angular-basis.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JupeterComponent,
     CoursesComponent,
-    SliceText
+    SliceText,
+    AngularBasisComponent
   ],
   imports: [
     BrowserModule,
