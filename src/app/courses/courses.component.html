@@ -4,4 +4,8 @@
 
 <br>
 
-<input type="text" (keyup.enter)="onKeyUp()">
+<p>{{email}}</p>
+
+<input type="text" [(ngModel)] = "email" />
+
+<h3>{{text | slice}}</h3>

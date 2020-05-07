@@ -9,17 +9,21 @@ import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
 import { HeroesService } from './heroes.service';
 import { CoursesComponent } from './courses/courses.component';
+import { FormsModule } from '@angular/forms';
+import { SliceText } from './courses/slice.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     JupeterComponent,
-    CoursesComponent
+    CoursesComponent,
+    SliceText
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [HeroesService],
   bootstrap: [AppComponent]  

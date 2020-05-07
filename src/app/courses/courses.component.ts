@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  title: string = "angular for Superman"
+  title: string = "angular for Superman";
+
+  email: string = "Batman@gmail.com";
+
+  text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+  
   constructor() { }
 
   ngOnInit(): void {
