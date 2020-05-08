@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-angular-basis',
@@ -7,9 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AngularBasisComponent implements OnInit {
   @Input() isSelected:boolean = false;
+  @Output() greeting = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  outPutProp(){
+    console.log("hi...output!");
+    this.greeting.emit();
+    console.log(this.greeting);
+    
   }
 
 }

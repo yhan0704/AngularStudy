@@ -10,5 +10,8 @@
 
 <h3>{{text | titlecase}}</h3>
 
-<app-angular-basis [isSelected]="isSelected"></app-angular-basis>
+<app-angular-basis [isSelected]="parentSelected"></app-angular-basis>
 <button (click)="onClick()">Click Here</button>
+
+
+<app-angular-basis (greeting)="onGreeting()"></app-angular-basis>

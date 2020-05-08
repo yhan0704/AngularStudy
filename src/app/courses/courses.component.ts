@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-courses',
@@ -10,7 +10,7 @@ export class CoursesComponent implements OnInit {
 
   email: string = "Batman@gmail.com";
 
-  isSelected:boolean = true;
+  parentSelected:boolean = false;
 
   text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
   
@@ -29,7 +29,12 @@ export class CoursesComponent implements OnInit {
   }
 
   onClick(){
-    this.isSelected = !this.isSelected;
+    this.parentSelected = !this.parentSelected;
+  }
+
+  onGreeting(){
+    console.log("hi..this is mom");
+    
   }
 
 }
