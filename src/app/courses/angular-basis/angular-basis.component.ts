@@ -10,6 +10,8 @@ export class AngularBasisComponent implements OnInit {
   @Input() isSelected:boolean = false;
   @Output() greeting = new EventEmitter();
 
+  students: Array<string> = ["Superman", "Batman", "Ironman"]
+
   constructor() { }
 
   ngOnInit(): void {

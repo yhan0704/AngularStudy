@@ -6,3 +6,10 @@
 
 <!-- output -->
 <button (click)="outPutProp()">outPut!</button>
+
+<!-- ngfor -->
+<div>Registered Students:
+    <li *ngFor="let student of students">
+        {{student}}
+    </li>
+</div>

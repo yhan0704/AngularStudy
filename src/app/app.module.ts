@@ -12,6 +12,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { SliceText } from './courses/slice.pipe';
 import { AngularBasisComponent } from './courses/angular-basis/angular-basis.component';
+import { IonicComponent } from './courses/ionic/ionic.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AngularBasisComponent } from './courses/angular-basis/angular-basis.com
     JupeterComponent,
     CoursesComponent,
     SliceText,
-    AngularBasisComponent
+    AngularBasisComponent,
+    IonicComponent
   ],
   imports: [
     BrowserModule,
