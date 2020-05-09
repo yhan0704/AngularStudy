@@ -8,8 +8,21 @@
 <button (click)="outPutProp()">outPut!</button>
 
 <!-- ngfor -->
-<div>Registered Students:
-    <li *ngFor="let student of students">
-        {{student}}
+<!-- <div>Registered Students:
+    <li *ngFor="let student of students; index as i">
+        {{ i+1 }} - {{student}}
     </li>
+</div> -->
+
+<div>Registered Courses:
+    <li *ngFor="let course of courses">
+        <a (click)="onClick(course)">{{course}}</a> 
+    </li>
+</div>
+
+<div [ngSwitch]="coursePage">
+    <div *ngSwitchCase="'Angular'">About Angular.....</div>
+    <div *ngSwitchCase="'React'">About React.....</div>
+    <div *ngSwitchCase="'JavaScript'">About JavaScript.....</div>
+    <div *ngSwitchDefault>About anything else</div>
 </div>

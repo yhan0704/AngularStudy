@@ -11,6 +11,8 @@ export class AngularBasisComponent implements OnInit {
   @Output() greeting = new EventEmitter();
 
   students: Array<string> = ["Superman", "Batman", "Ironman"]
+  courses: Array<string> = ["Angular", "React", "JavaScript"]
+  coursePage: string;
 
   constructor() { }
 
@@ -22,6 +24,11 @@ export class AngularBasisComponent implements OnInit {
     this.greeting.emit();
     console.log(this.greeting);
     
+  }
+  
+  onClick(course){
+    console.log(course);
+    this.coursePage = course
   }
 
 }
