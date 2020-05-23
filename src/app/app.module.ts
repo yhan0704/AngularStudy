@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { SliceText } from './courses/slice.pipe';
 import { AngularBasisComponent } from './courses/angular-basis/angular-basis.component';
 import { IonicComponent } from './courses/ionic/ionic.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IonicComponent } from './courses/ionic/ionic.component';
     CoursesComponent,
     SliceText,
     AngularBasisComponent,
-    IonicComponent
+    IonicComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
