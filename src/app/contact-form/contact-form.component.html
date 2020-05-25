@@ -11,7 +11,11 @@
     <div>
         <label for="id">ID </label>
         <input required minlength="3" maxlength="7" pattern="young" ngModel #id=ngModel name="id" id="id" cols="30" rows="10" (click)="log(id)" />
-        <div *ngIf="id.touched && !id.valid">ID Required</div>
+        <div *ngIf="id.touched && !id.valid">
+            <div *ngIf="id.errors['required']">Reqire ID</div>
+            <div *ngIf="id.errors['minlength']">more than 3 characters</div>
+        </div>
+
     </div>
     <br>
     <div>
