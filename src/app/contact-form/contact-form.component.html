@@ -1,6 +1,6 @@
 <!-- templete form/// responsive form -->
 
-<form action="">
+<form #form=ngForm (ngSubmit)=submit(form)>
     <div>
         <label for="firstName">First Name</label>
         <!-- validation -->

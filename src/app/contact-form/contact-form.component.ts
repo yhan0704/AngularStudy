@@ -13,6 +13,10 @@ export class ContactFormComponent implements OnInit {
     console.log(x)
   }
 
+  submit(x){
+    console.log(x.value.firstName, x.value.id)
+  }
+
   ngOnInit(): void {
   }
 
