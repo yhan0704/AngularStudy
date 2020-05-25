@@ -1,12 +1,23 @@
+<!-- templete form/// responsive form -->
+
 <form action="">
     <div>
         <label for="firstName">First Name</label>
-        <input id="firstName" type="text">
+        <!-- validation -->
+        <input required ngModel name="firstName" #firstName=ngModel id="firstName" type="text" (click)="log(firstName)">
+        <div *ngIf="firstName.touched && !firstName.valid">Name Field Required</div>
+    </div>
+    <br>
+    <div>
+        <label for="id">ID </label>
+        <input required minlength="3" maxlength="7" pattern="young" ngModel #id=ngModel name="id" id="id" cols="30" rows="10" (click)="log(id)" />
+        <div *ngIf="id.touched && !id.valid">ID Required</div>
     </div>
     <br>
     <div>
         <label for="comment">Comment</label>
         <br>
         <textarea name="" id="comment" cols="30" rows="10"></textarea>
-        </div>
+    </div>
+    <button>Submit</button>
 </form>
