@@ -14,6 +14,8 @@ import { SliceText } from './courses/slice.pipe';
 import { AngularBasisComponent } from './courses/angular-basis/angular-basis.component';
 import { IonicComponent } from './courses/ionic/ionic.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { PostComponent } from './post/post.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     SliceText,
     AngularBasisComponent,
     IonicComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [HeroesService],
   bootstrap: [AppComponent]  
