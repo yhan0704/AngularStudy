@@ -26,10 +26,30 @@
 
     <div>
         <label>
-            <input type="checkbox">
+            <input type="checkbox" ngModel name="isSubScribed"> subscript my blog
         </label>
-        <p>{{form.value | json}}</p>
     </div>
+
+    <br>
+
+    <div>
+        <label for="contactMethod">Contact Method
+            <select ngModel name="contactMethood" id="contactMethood">
+                <option *ngFor="let method of contactMethods" [value]=method.id>{{method.name}}</option>
+            </select>
+        </label>
+    </div>
+
+    <br>
+
+    <div>
+        <label *ngFor="let method of contactMethods">
+            <input ngModel name="Radio Button" type="radio" [value]=method.id>
+            {{method.name}}
+        </label>
+    </div>
+
+    <p>{{form.value | json}}</p>
 
     <button>Submit</button>
 </form>
