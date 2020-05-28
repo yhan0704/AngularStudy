@@ -21,12 +21,18 @@ export class PostComponent implements OnInit {
   createPost(input){
     let title = {title: input.value}
     input.value= ""
+    this.posts.splice(0,0, title);
     this.http.post(this.url, JSON.stringify(title))
     .subscribe((res:{id}) => {
       title['id'] = res.id
-      this.posts.splice(0,0, title);
     })
-    
+  }
+
+  onUpdate(item){
+    this.http.patch(this.url + "/" + item.id, JSON.stringify({isRead:true}))
+      .subscribe(res => {
+        console.log(res); 
+      })
   }
 
   ngOnInit(): void {
