@@ -16,6 +16,7 @@ import { IonicComponent } from './courses/ionic/ionic.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PostComponent } from './post/post.component';
 import {HttpClientModule} from '@angular/common/http'
+import { PostService } from 'src/services/post.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {HttpClientModule} from '@angular/common/http'
     FormsModule,
     HttpClientModule
   ],
-  providers: [HeroesService],
+  providers: [HeroesService,
+              PostService],
   bootstrap: [AppComponent]  
 })
 export class AppModule { }
