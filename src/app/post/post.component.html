@@ -2,6 +2,7 @@
 
 <ul *ngFor="let item of posts">
     <button (click)="onUpdate(item)" >Update</button>
+    <button (click)="onDelete(item)" >Delete</button>
     <li>
         {{item.title}}
     </li>

@@ -20,5 +20,9 @@ export class PostService {
   createPatch(item){
     return this.http.patch(this.url + "/" + item.id, JSON.stringify({isRead:true}))
   }
+
+  onDelete(item){
+    return this.http.delete(this.url+"/"+item.id)
+  }
   
 }

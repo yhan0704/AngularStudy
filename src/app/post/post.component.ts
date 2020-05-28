@@ -32,6 +32,15 @@ export class PostComponent implements OnInit {
       })
   }
 
+  onDelete(item){
+    let index = this.posts.indexOf(item)
+    this.posts.splice(index, 1)
+    this.service.onDelete(item)
+      .subscribe(res => {
+
+      })
+  }
+
   ngOnInit(){
     this.service.createGet()
     .subscribe(res => {
