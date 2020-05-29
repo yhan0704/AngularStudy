@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/services/post.service';
+import { Stocks } from '../model/stocks';
 
 
 @Component({
@@ -16,21 +17,20 @@ export class PostComponent implements OnInit {
   }
   
   ngOnInit(){
-    this.service.createGet()
+    this.service.getData()
     .subscribe(res => {
       this.posts  = res;
     })
   }
 
   createPost(input){
-    console.log(input.value)
-    let title = {title: input.value}
-    input.value= ""
-    this.posts.splice(0,0, title);
-    this.service.createPost(title)
-    .subscribe((res:{id}) => {
-      title['id'] = res.id
+    let name = {name: input.value}
+    this.posts.splice(0,0, name);
+    this.service.createPost(input.value)
+      .subscribe(res => {
+        this.posts.id = res.id
     })
+    input.value= ""
   }
 
   // onUpdate(item){
@@ -40,11 +40,11 @@ export class PostComponent implements OnInit {
   //     })
   // }
 
-  onDelete(item){
+  onDelete(id:number){
     if(confirm("Are you sure??")){
-    this.service.createDelete(item)
-      .subscribe(res => {
-        let index = this.posts.indexOf(item)
+    this.service.createDelete(id)
+      .subscribe(() => {
+        let index = this.posts.indexOf(id)
         this.posts.splice(index, 1)
       })
     }

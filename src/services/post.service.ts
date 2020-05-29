@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from  '@angular/common/http';
+import { HttpClient, HttpHeaders } from  '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Stocks } from 'src/app/model/stocks';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  url: string = "https://jsonplaceholder.typicode.com/posts";
-  
+  url: string = "http://localhost:3000/stocks";
+  stockId;
   constructor(private http : HttpClient) { }
 
-  createGet(): Observable<any[]> {
-    return this.http.get<any>(this.url)
+  getData(): Observable<Stocks[]> {
+    return this.http.get<Stocks[]>(this.url)
   }
 
-  createPost(title){
-    return this.http.post(this.url, JSON.stringify(title))
+  createPost(stock: Stocks): Observable<Stocks> {
+    return this.http.post<any>(this.url, {name: stock})
   }
+  
 
   // createPatch(item){
   //   return this.http.patch(this.url + "/" + item.id, JSON.stringify({isRead:true}))
