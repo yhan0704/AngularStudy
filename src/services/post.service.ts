@@ -9,7 +9,7 @@ import { Stocks } from 'src/app/model/stocks';
   providedIn: 'root'
 })
 export class PostService {
-  url: string = "http://localhost:3000/stocks";
+  url: string = "https://jsonplaceholder.typicode.com/posts";
   stockId;
   constructor(private http : HttpClient) { }
 
