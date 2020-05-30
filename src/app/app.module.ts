@@ -1,12 +1,12 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JupeterComponent } from './jupeter/jupeter.component';
 
-import { MatInputModule } from "@angular/material/input";
-import { MatCardModule } from "@angular/material/card";
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { HeroesService } from './heroes.service';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
@@ -15,8 +15,9 @@ import { AngularBasisComponent } from './courses/angular-basis/angular-basis.com
 import { IonicComponent } from './courses/ionic/ionic.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PostComponent } from './post/post.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 import { PostService } from 'src/services/post.service';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +32,13 @@ import { PostService } from 'src/services/post.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MatCardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [HeroesService,
               PostService],
-  bootstrap: [AppComponent]  
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
