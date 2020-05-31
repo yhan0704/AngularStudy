@@ -17,6 +17,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { PostComponent } from './post/post.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PostService } from 'src/services/post.service';
+import { NotFountComponent } from './not-fount/not-fount.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { PostService } from 'src/services/post.service';
     AngularBasisComponent,
     IonicComponent,
     ContactFormComponent,
-    PostComponent
+    PostComponent,
+    NotFountComponent,
+    NavbarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
