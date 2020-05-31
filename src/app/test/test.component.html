@@ -1,1 +1,13 @@
-<p>test works!</p>
+<h1>Welcome {{name}}</h1>
+
+<input type="text" bind-disabled="isdisable" value="Vishwas">
+
+<h2 class="text-success">Codevolution</h2>
+<h2 [class]="successClass">Codevolution</h2>
+
+<h2 [class.text-danger]="hasError">Codevolution</h2>
+<h2 [ngClass]="messageClass">Codevolution</h2>
+
+<h2 [style.color]='"red"'>Style Binding</h2>
+
+<button (click)="onClick($event)">Click Me</button>
