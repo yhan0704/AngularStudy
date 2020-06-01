@@ -10,4 +10,19 @@
 
 <h2 [style.color]='"red"'>Style Binding</h2>
 
-<button (click)="onClick($event)">Click Me</button>
+<button (click)="onClick($event)">Click Me</button> 
+
+<input type="text" placeholder="type any..." [(ngModel)]="name">{{name}}
+
+<br>
+<br>
+
+<input type="text" #textInput (keyup)="onKeyUp(textInput)">
+
+<button (click)="buttonEvent($event)">Submit</button>
+
+<p *ngIf="showInput == 'Young'; else otherMent"> hello, young {{showInput}} </p> 
+
+<ng-template #otherMent>
+    {{showInput}}
+</ng-template>

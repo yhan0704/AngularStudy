@@ -21,6 +21,8 @@ import { NotFountComponent } from './not-fount/not-fount.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TestComponent } from './test/test.component';
 
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [

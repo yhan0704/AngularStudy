@@ -9,9 +9,11 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
-  public name = 'Young Chan';
+  public name = '';
   public myId = 'testId';
-  public isdisable = false;
+  public forButtonInput = '';
+  public showInput = '';
+  public isdisable = true;
   public isSpecial = true;
   public successClass = 'text-success';
   public hasError = false;
@@ -21,8 +23,20 @@ export class TestComponent implements OnInit {
     'text-special': this.isSpecial
   };
 
+
   onClick(event){
     console.log(event);
+  }
+
+  buttonEvent(event){
+    console.log(this.forButtonInput);
+    this.showInput = this.forButtonInput;
+  }
+
+  onKeyUp(e){
+    console.log(e.value);
+    this.forButtonInput = e.value;
+    console.log(this.forButtonInput);
   }
 
   ngOnInit(): void {
